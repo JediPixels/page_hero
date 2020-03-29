@@ -45,25 +45,25 @@ You need to define a `pageBuilder` function to create the route's content and de
 ```dart
 Navigator.of(context).push(
   PageRouteBuilder(
+    transitionDuration: Duration(milliseconds: 1000),
     pageBuilder: (
-        BuildContext context, 
-        Animation<double> animation, 
+        BuildContext context,
+        Animation<double> animation,
         Animation<double> secondaryAnimation) {
       return Details();
     },
     transitionsBuilder: (
-        BuildContext context, 
-        Animation<double> animation, 
-        Animation<double> secondaryAnimation, 
+        BuildContext context,
+        Animation<double> animation,
+        Animation<double> secondaryAnimation,
         Widget child) {
       return Align(
-        child: SizeTransition(
-          sizeFactor: animation,
+        child: FadeTransition(
+          opacity: animation,
           child: child,
         ),
       );
     },
-    transitionDuration: Duration(milliseconds: 500),
   ),
 );
 ```
