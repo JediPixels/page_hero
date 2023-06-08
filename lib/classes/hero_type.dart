@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 
 class HeroType {
+  HeroType({
+    required this.title,
+    required this.subTitle,
+    required this.image,
+    required this.materialColor,
+  });
+
   String title;
   String subTitle;
   String image;
   MaterialColor materialColor;
 
-  HeroType({this.title, this.subTitle, this.image, this.materialColor});
-
-  List<HeroType> createSampleList() {
-    List _heroType = List<HeroType>();
-    return _heroType
+  static List createSampleList() {
+    List heroType = <HeroType>[];
+    return heroType
       ..add(HeroType(
           title: 'Amber',
           subTitle: 'Lorem ipsum dolor sit amet',
@@ -23,7 +28,8 @@ class HeroType {
           materialColor: Colors.lightGreen))
       ..add(HeroType(
           title: 'Light Blue',
-          subTitle: 'Sed do eiusmod tempor incididunt - Placerat ullamcorper nulla, nulla potenti consequat sem. Sed molestie litora. Sit diam lorem. Fringilla purus pharetra, pretium quam sed et. Ultricies at facilisis vehicula sit etiam urna, quis pellentesque, congue erat posuere auctor aut mauris, consequat ipsum aenean. Imperdiet iaculis quis lorem, arcu praesent leo cras placerat. Dapibus ligula risus eros curae, neque lobortis nunc libero dolor ac.',
+          subTitle:
+              'Sed do eiusmod tempor incididunt - Placerat ullamcorper nulla, nulla potenti consequat sem. Sed molestie litora. Sit diam lorem. Fringilla purus pharetra, pretium quam sed et. Ultricies at facilisis vehicula sit etiam urna, quis pellentesque, congue erat posuere auctor aut mauris, consequat ipsum aenean. Imperdiet iaculis quis lorem, arcu praesent leo cras placerat. Dapibus ligula risus eros curae, neque lobortis nunc libero dolor ac.',
           image: 'assets/images/tree.jpg',
           materialColor: Colors.lightBlue))
       ..add(HeroType(

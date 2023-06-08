@@ -4,15 +4,15 @@ import 'package:pagehero/classes/hero_type.dart';
 class Details extends StatefulWidget {
   final HeroType heroType;
 
-  const Details({Key key, this.heroType}) : super(key: key);
+  const Details({super.key, required this.heroType});
 
   @override
   _DetailsState createState() => _DetailsState();
 }
 
 class _DetailsState extends State<Details> {
-  HeroType _heroType;
-  double _screenWidth;
+  late HeroType _heroType;
+  late double _screenWidth;
 
   @override
   void initState() {

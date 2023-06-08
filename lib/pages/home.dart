@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:pagehero/classes/hero_type.dart';
 
 import 'details.dart';
@@ -11,13 +9,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List _heroTypeList = List<HeroType>();
-  double _screenWidthAdjustment;
+  List _heroTypeList = <HeroType>[];
+  late double _screenWidthAdjustment;
 
   @override
   void initState() {
     super.initState();
-    _heroTypeList = HeroType().createSampleList();
+    _heroTypeList = HeroType.createSampleList();
   }
 
   @override
